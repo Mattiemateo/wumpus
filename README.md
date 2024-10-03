@@ -33,19 +33,19 @@ The game provides cryptic hints to help you deduce the location of the Wumpus an
 
 To play the Bash version, run:
 ```bash
-./hunt_wumpus_bash.sh
+./main.sh
 ```
 
 Ensure that you have executable permissions for the script:
 ```bash
-chmod +x hunt_wumpus_bash.sh
+chmod +x main.sh
 ```
 
 ### Python Version
 
 To play the Python version, run:
 ```bash
-python3 hunt_wumpus.py
+python3 main.py
 ```
 
 Make sure you have Python 3 installed on your system.
@@ -64,8 +64,8 @@ Make sure you have Python 3 installed on your system.
 
 ## File Structure
 
-- `hunt_wumpus_bash.sh`: Bash version of the game
-- `hunt_wumpus.py`: Python version of the game
+- `main.sh`: Bash version of the game
+- `main.py`: Python version of the game
 - `README.md`: This file
 
 ## Contributing

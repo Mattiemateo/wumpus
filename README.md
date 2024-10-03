@@ -75,4 +75,3 @@ Contributions are welcome! If you'd like to make improvements or fix bugs, feel 
 ## License
 
 This project is licensed under the MIT License. See `LICENSE` for more information.
-```

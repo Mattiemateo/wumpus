@@ -104,6 +104,7 @@ check_hazards() {
 }
 
 # Main game loop
+# Main game loop
 echo "Welcome to Hunt the Wumpus!"
 
 while [ $arrows -gt 0 ]; do
@@ -113,10 +114,10 @@ while [ $arrows -gt 0 ]; do
     echo "Arrows left: $arrows"
     check_hazards
 
-    read -p "Move (M), Shoot (S), or Exit (E)? " -n 1 -r command
-    echo
+    read -p "Move (M), Shoot (S), or Exit (E)? " command
+    command=$(echo $command | tr '[:lower:]' '[:upper:]')
     case $command in
-        [Mm])
+        M)
             read -p "Which room? " room
             if [[ $room =~ ^[0-9]+$ ]]; then
                 move $room
@@ -124,7 +125,7 @@ while [ $arrows -gt 0 ]; do
                 echo "Invalid input. Please enter a valid room number."
             fi
             ;;
-        [Ss])
+        S)
             read -p "Shoot into which room? " room
             if [[ $room =~ ^[0-9]+$ ]]; then
                 shoot_arrow $room
@@ -132,7 +133,7 @@ while [ $arrows -gt 0 ]; do
                 echo "Invalid input. Please enter a valid room number."
             fi
             ;;
-        [Ee])
+        E)
             echo "Exiting the game... Goodbye!"
             exit 0
             ;;
